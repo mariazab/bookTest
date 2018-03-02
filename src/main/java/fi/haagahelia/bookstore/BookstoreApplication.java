@@ -31,9 +31,11 @@ public class BookstoreApplication {
 			
 			Book b1 = new Book("The Witch", "Camilla Lackberg", 2017, "38949029-3", 35, crime);
 			Book b2 = new Book("The Police", "Jo Nesbo", 2014, "3344909-6", 25, crime);
+			Book b3 = new Book("Just One Look", "Harlan Coben", 2010, "9723897", 30, crime);
 			
 			repository.save(b1);
 			repository.save(b2);
+			repository.save(b3);
 		};
 	}
 	
