@@ -82,4 +82,10 @@ public class BookController {
 		return "editBook";
 	}
 	
+	// Login 
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
+	
 }
