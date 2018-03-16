@@ -10,7 +10,7 @@
      <div class="col-md-4">
 		<form th:object="${signupform}" th:action="@{/saveuser}" action="#" method="post">
 			<div>
-				<label>Username: <input type="text" th:field="*{username}" /></label>
+				<label>Username: <input type="text" th:field="*{username}"/></label>
 				<p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</p>
 			</div>
 			<div>

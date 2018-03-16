@@ -1,7 +1,5 @@
 package fi.haagahelia.bookstore.web;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -10,6 +8,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
 
 import fi.haagahelia.bookstore.domain.UserRepository;
 import fi.haagahelia.bookstore.domain.User;
@@ -29,7 +29,7 @@ public class UserController {
 	
 	// Create new user and check if user already exists
 	
-	@RequestMapping(value="/saveuser", method = RequestMethod.POST)
+	@RequestMapping(value="/saveuser", method=RequestMethod.POST)
 	public String save(@Valid @ModelAttribute("signupform") SignupForm signupForm, BindingResult bindingResult) {
 		// Validation errors
 		System.out.println(signupForm.getUsername());
